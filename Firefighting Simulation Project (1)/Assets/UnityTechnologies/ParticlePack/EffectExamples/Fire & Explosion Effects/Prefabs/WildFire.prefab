@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4386469650373010}
   - component: {fileID: 198056694026403006}
   - component: {fileID: 199410169587898828}
+  - component: {fileID: 1298283820700329824}
   m_Layer: 0
   m_Name: Embers
   m_TagString: Untagged
@@ -4752,6 +4753,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1298283820700329824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421748765687022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190a7f0eb88ec64fbd55a0865d543a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1956197547661106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,6 +4778,7 @@ GameObject:
   - component: {fileID: 199266017805695016}
   - component: {fileID: 7274591208008070287}
   - component: {fileID: 8117175792014542193}
+  - component: {fileID: 4185826670690859833}
   m_Layer: 0
   m_Name: WildFire
   m_TagString: Untagged
@@ -9636,6 +9650,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 10
   damageInterval: 0.5
+--- !u!114 &4185826670690859833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956197547661106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190a7f0eb88ec64fbd55a0865d543a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1982324152055030
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,6 +9673,7 @@ GameObject:
   - component: {fileID: 4856345040711628}
   - component: {fileID: 198266200310702596}
   - component: {fileID: 199629727218301296}
+  - component: {fileID: 1856684376852219364}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -14478,6 +14505,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1856684376852219364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982324152055030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190a7f0eb88ec64fbd55a0865d543a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1703893126634428692
 GameObject:
   m_ObjectHideFlags: 0
@@ -14830,14 +14869,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5353836915797955378, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
       insertIndex: 1
       addedObject: {fileID: 8696107092952267302}
+    - targetCorrespondingSourceObject: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8977603250092884859}
   m_SourcePrefab: {fileID: 100100000, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
 --- !u!4 &4152818873777045464 stripped
 Transform:
@@ -19350,3 +19391,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &8977603250092884859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158305695303473168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c190a7f0eb88ec64fbd55a0865d543a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

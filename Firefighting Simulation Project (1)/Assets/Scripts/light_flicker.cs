@@ -43,11 +43,9 @@ public class BuildingFlicker : MonoBehaviour
     {
         while (true)
         {
-            // 1. All lights on, wait 10–15 seconds
             SetAllLights(true);
             yield return new WaitForSeconds(Random.Range(minInterval, maxInterval));
 
-            // 2. Flicker burst — all lights toggle together
             float burstEnd = Time.time + Random.Range(minBurstDuration, maxBurstDuration);
             bool on = true;
             while (Time.time < burstEnd)
@@ -57,11 +55,8 @@ public class BuildingFlicker : MonoBehaviour
                 yield return new WaitForSeconds(Random.Range(minBlinkTime, maxBlinkTime));
             }
 
-            // 3. Blackout before recovery
             SetAllLights(false);
             yield return new WaitForSeconds(Random.Range(minBlackoutDuration, maxBlackoutDuration));
-
-            // Loop restarts — step 1 turns lights back on
         }
     }
 

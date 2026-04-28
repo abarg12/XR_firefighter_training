@@ -10,7 +10,6 @@ public class CatFireSpawner : MonoBehaviour
     private GameObject firePrefab;
     private Transform[] fireSpawnPoints;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
-    // public GameObject HUD;
 
     void Awake()
     {
@@ -27,7 +26,7 @@ public class CatFireSpawner : MonoBehaviour
             interactable.selectEntered.RemoveListener(OnSelected);
     }
 
-    // Updated Configure method to accept the endZone dynamically
+    // dynamically set values
     public void Configure(GameObject firePrefab, Transform[] spawnPoints, GameObject endZone)
     {
         this.firePrefab = firePrefab;

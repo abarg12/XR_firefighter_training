@@ -1,3 +1,5 @@
+// Copied and edited version of the XR Interaction toolkit ControllerInputActionManager.cs
+
 using System.Collections.Generic;
 using Unity.XR.CoreUtils.Bindings;
 using UnityEngine.Events;

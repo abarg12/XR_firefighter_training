@@ -18,13 +18,11 @@ public class RandomMeowPlayer : MonoBehaviour
     [Header("Timing")]
     [Tooltip("Base interval between meows (seconds).")]
     public float interval = 4f;
-    [Tooltip("Random +/- added to interval for a less robotic feel. Set to 0 for exact 4s.")]
     public float intervalJitter = 0.5f;
 
     [Header("Variation (optional)")]
     [Range(0f, 0.5f)] public float pitchJitter = 0.1f;
     [Range(0f, 0.3f)] public float volumeJitter = 0.1f;
-    [Tooltip("Prevents the same clip from playing twice in a row.")]
     public bool avoidRepeats = true;
 
     private AudioSource audioSource;
