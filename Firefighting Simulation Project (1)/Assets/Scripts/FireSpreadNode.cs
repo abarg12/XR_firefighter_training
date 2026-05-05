@@ -38,8 +38,24 @@ public class FireSpreadNode: MonoBehaviour
         if (isOnFire) return;
 
         isOnFire = true;
-        FindObjectOfType<DynamicFogManager>().activeFires.Add(this.transform);
-        fireVFX.SetActive(true);
+        
+        DynamicFogManager fogManager = FindObjectOfType<DynamicFogManager>();
+        if (fogManager != null)
+        {
+            fogManager.activeFires.Add(this.transform);
+        }
+
+        if (fireVFX != null)
+        {
+            fireVFX.SetActive(true);
+            
+            ParticleSystem[] allParticles = fireVFX.GetComponentsInChildren<ParticleSystem>();
+            foreach(ParticleSystem ps in allParticles)
+            {
+                ps.Play();
+            }
+        }
+
         StartCoroutine(SpreadRoutine());
     }
 

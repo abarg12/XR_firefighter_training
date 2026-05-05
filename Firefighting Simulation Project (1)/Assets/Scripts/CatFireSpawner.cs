@@ -60,8 +60,15 @@ public class CatFireSpawner : MonoBehaviour
         {
             foreach (Transform point in fireSpawnPoints)
             {
-                if (point != null)
-                    Instantiate(firePrefab, point.position, point.rotation);
+                if (point != null) {
+                    GameObject spawnedFire = Instantiate(firePrefab, point.position, point.rotation);
+                
+                    FireSpreadNode fireNode = spawnedFire.GetComponent<FireSpreadNode>();
+                    if (fireNode != null)
+                    {
+                        fireNode.Ignite();
+                    }
+                }
             }
         }
 
