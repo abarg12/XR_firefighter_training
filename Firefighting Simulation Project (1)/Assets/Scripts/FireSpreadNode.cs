@@ -22,14 +22,30 @@ public class FireSpreadNode: MonoBehaviour
     {
         if (isOnFire)
         {
-            FindObjectOfType<DynamicFogManager>().activeFires.Add(this.transform);
+            DynamicFogManager fogManager = FindObjectOfType<DynamicFogManager>();
+            if (fogManager != null)
+            {
+                fogManager.activeFires.Add(this.transform);
+            }
 
-            fireVFX.SetActive(true);
+            if (fireVFX != null)
+            {
+                fireVFX.SetActive(true);
+                ParticleSystem[] allParticles = fireVFX.GetComponentsInChildren<ParticleSystem>();
+                foreach (ParticleSystem ps in allParticles)
+                {
+                    ps.Play();
+                }
+            }
+
             StartCoroutine(SpreadRoutine());
         }
         else
         {
-            fireVFX.SetActive(false);
+            if (fireVFX != null)
+            {
+                fireVFX.SetActive(false);
+            }
         }
     }
 
